@@ -1,0 +1,23 @@
+{
+  "name": "legal-object-expiry",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "tsx src/storage_setup.ts",
+    "dev": "tsx src/matter_intake.ts",
+    "sweep": "tsx src/expiry_sweeper.ts",
+    "demo": "tsx src/demo.ts",
+    "test": "tsx --test test/retention_policy.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

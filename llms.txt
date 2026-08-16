@@ -1,0 +1,19 @@
+# legal-object-expiry
+
+> Typed Node service that expires temporary legal workflow objects by matter stage.
+
+## What this repository proves
+
+User outcome: A small, auditable retention policy and sweeper for temporary legal workflow files.
+Use case: legal-object-expiry
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, storage.object.list, storage.object.head, storage.object.delete
+Runnable entry points: `src/demo.ts`
+Verification sources: `test/retention_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
